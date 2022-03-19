@@ -304,7 +304,7 @@ def train(hyp,  # path/to/hyp.yaml or hyp dictionary
             import shutil
             NCOLS = shutil.get_terminal_size().columns  # terminal window size for tqdm
             print(NCOLS)
-            pbar = tqdm(pbar, total=nb, ncols=80, bar_format='{l_bar}{bar:10}{r_bar}{bar:-10b}')  # progress bar
+            pbar = tqdm(pbar, total=nb, ncols=120, bar_format='{l_bar}{bar:10}{r_bar}{bar:-10b}')  # progress bar
         optimizer.zero_grad()
         for i, (imgs, targets, paths, _) in pbar:  # batch -------------------------------------------------------------
             ni = i + nb * epoch  # number integrated batches (since train start)
